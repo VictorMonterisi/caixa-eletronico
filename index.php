@@ -68,7 +68,7 @@
         $quantidadeMoedas1Centavo = floor($moduloDivisao5Centavos / $moeda1centavo);
         $moduloDivisao1Centavo = $moduloDivisao5Centavos % $moeda1centavo;
 
-        echo 'Moedas: ' . $valorEmMoedas . '<br><br>';
+        echo 'Centavos: ' . $valorEmMoedas . '<br><br>';
 
         echo 'Moedas de 50: ' . $quantidadeMoedas50Centavos . '<br><br>';
         echo 'Moedas de 25: ' . $quantidadeMoedas25Centavos . '<br><br>';
