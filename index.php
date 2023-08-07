@@ -11,8 +11,8 @@
         <div class="container">
             <div class="input">
                 <form id="formulario-caixa" method="post">
-                    <label for="valor-informado"></label>
-                    <input name="valor-informado">
+                    <label for="valorParaSaque">Informe o valor para saque:</label>
+                    <input type="text" id="valorParaSaque" name="valorParaSaque">
                     <br>
                     <input type="submit" name="Enviar">
                 </form>
