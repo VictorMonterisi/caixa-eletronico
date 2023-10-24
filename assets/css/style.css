@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.principal {
+    font-family: Verdana, sans-serif;
+	font-size: 62.5%;
+    background: #cacdd1;
+}
+
+header h1,
+header h2 {
+    text-transform: capitalize;
+    font-size: 4.5em;
+}
+
+.top-section {
+    background: #044421;
+    color: #fff;
+    height: 24vh;
+    margin: 15px 0 0 0;
+    padding: 25px 25px;
+    border-radius: 0px 25px 0px 25px;
+}
+
+#form-saque label {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+#form-saque .btn-saque {
+    background: #12db90;
+    color: #111
+}
+
+#form-saque .btn-saque:hover {
+    background: #1262DB;
+    color: #fff
+}
+
+/* .botton-section {
+    background-color: lightslategray;
+    height: 80vh;
+} */
