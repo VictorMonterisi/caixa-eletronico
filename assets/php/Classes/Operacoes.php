@@ -4,15 +4,30 @@
             $saldo = 2063.33;
             return $saldo;
         }
+
         private function pega_valor_saque() {
+            $saldo = $this->ver_saldo();
             $valor_saque = filter_input(INPUT_POST, 'valor_saque', FILTER_VALIDATE_FLOAT);
+
             if ($valor_saque === false || $valor_saque === null) {
                 // Lidar com erro de entrada inválida, por exemplo, redirecionar de volta ao formulário com uma mensagem de erro
                 die('Valor de saque inválido.');
-            } else {
+            } elseif ($valor_saque <= $saldo) {
                 return $valor_saque;
+            } else {
+                die('Saldo insuficiente.');
             }
         }
+
+        public function atualiza_saldo() {
+            $saldo = $this->ver_saldo();
+            $saque = $this->pega_valor_saque();
+
+            $saldo -= $saque;
+
+            return number_format($saldo, 2);
+        }
+
         private function calcula_notas_moedas() {
             $valor = $this->pega_valor_saque();
 
@@ -40,9 +55,11 @@
 
             return $resultado;
         }
+
         public function mostra_saldo() {
             echo $this->ver_saldo();
         }
+
         public function mostra_qtd_notas_moedas() {
             $valor_saque = $this->calcula_notas_moedas();
             foreach ($valor_saque as $descricao => $quantidade) {

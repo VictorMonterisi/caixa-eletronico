@@ -11,7 +11,7 @@
                     <h1>Total na conta:</h1>
                 </div>
                 <div class="col-auto">
-                    <h2>R$ 2063,33</h2>
+                    <h2>R$ <?php echo $mostra_quantidades->atualiza_saldo(); ?></h2>
                 </div>
             <div>
         </section>        
