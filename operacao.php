@@ -1,7 +1,7 @@
 <?php
     include "assets/php/includes/head.php";
     require "assets/php/Classes/Operacoes.php";
-    $mostra_quantidades = new Operacoes();
+    $faz_operacao = new Operacoes();
 ?>
 <body class="container principal">
     <header>
@@ -11,7 +11,7 @@
                     <h1>Total na conta:</h1>
                 </div>
                 <div class="col-auto">
-                    <h2>R$ <?php echo $mostra_quantidades->atualiza_saldo(); ?></h2>
+                    <h2>R$ <?php echo $faz_operacao->atualiza_saldo(); ?></h2>
                 </div>
             <div>
         </section>        
@@ -20,7 +20,8 @@
         <main>
             <div class="output">
                 <?php
-                    $mostra_quantidades->mostra_qtd_notas_moedas();
+                    $faz_operacao->verifica_possibilidade_saque();
+                    $faz_operacao->mostra_qtd_notas_moedas();
                 ?>
             </div>
         </main>

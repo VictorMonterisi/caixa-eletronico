@@ -16,5 +16,5 @@
     $pega_dados = new Operacoes();
     $tempo = new Relogio();
     $saudacao = "{$tempo->descobre_fuso()}, {$pega_dados->encontra_cliente()}!";
-    $dados_monetarios = "💰 Saldo Total: {$pega_dados->pega_tipo_moeda()} {$pega_dados->pega_saldo()}";
+    $dados_monetarios = $pega_dados->atualiza_saldo();
 ?>

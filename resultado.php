@@ -1,5 +1,5 @@
 <?php
-    include "assets/php/includes/head.php";
+    include "assets/php/includes/head-atualizado.php";
 ?>
 <body id="principal" class="container">
     <header>
@@ -10,15 +10,18 @@
     </header>
     <section id="botton-section">
         <main>
-            <h2>Qual operação você deseja fazer?</h2>
+            <?php
+                $tipo_operacao = $_POST["tipo_operacao"];
+                $valor_informado = $_POST["valor_formulario"];
+                if($tipo_operacao == "deposito") {
+                    echo $pega_dados->feedback_deposito();
+                } elseif($tipo_operacao == "saque") {
+                    $pega_dados->mostra_qtd_notas_moedas();
+                }
+            ?>
             <section id="buttons-section">
-                <div class="row text-center">
-                    <div class="col-xs-12 col-md-6 pt-13">
-                        <a href="deposito.php" title="Quero fazer um depósito!" class="btn btn-deposito btn-lg">Depósito</a>
-                    </div>
-                    <div class="col-xs-12 col-md-6 pt-13">
-                        <a href="saque.php" title="Quero fazer um saque!" class="btn btn-saque btn-lg">Saque</a>
-                    </div>
+                <div class="text-center">
+                    <a href="index.php" title="Voltar!" class="btn btn-deposito btn-lg">Voltar</a>
                 </div>
             </section>
         </main>

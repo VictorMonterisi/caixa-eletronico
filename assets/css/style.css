@@ -1,46 +1,83 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root {
+    --preto: #111;
+    --branco: #FFF;
+    --cinza-claro: #CACDD1;
+    --verde-escuro: #044421;
+    --verde-claro: #49F55C;
+    --azul: #49AAF5;
+    --azul-claro: #49E0F5;
 }
 
-body.principal {
+body#principal {
     font-family: Verdana, sans-serif;
 	font-size: 62.5%;
-    background: #cacdd1;
+    background: var(--cinza-claro);
 }
 
-header h1,
-header h2 {
-    text-transform: capitalize;
-    font-size: 4.5em;
-}
-
-.top-section {
-    background: #044421;
-    color: #fff;
+#top-section {
+    background: var(--verde-escuro);
+    color: var(--branco);
     height: 24vh;
     margin: 15px 0 0 0;
     padding: 25px 25px;
     border-radius: 0px 25px 0px 25px;
 }
 
-#form-saque label {
+#top-section h1,
+#top-section h2 {
+    text-transform: capitalize;
+    font-size: 4.5em;
+    margin: 14px 0;
+}
+
+#botton-section {
+    background: var(--branco);
+    color: var(--preto);
+    height: 60vh;
+    margin: 15px 0 0 0;
+    padding: 25px 25px;
+    border-radius: 25px 0px 25px 0;
+}
+
+#botton-section .btn-deposito,
+#botton-section .btn-saque,
+#form-section .btn-deposito,
+#form-section .btn-saque {
+    width: 9.5em;
+    text-transform: uppercase;
+    color: var(--preto)
+}
+
+#botton-section .btn-deposito,
+#form-section .btn-deposito {
+    background: var(--azul);
+}
+
+#botton-section .btn-deposito:hover,
+#form-section .btn-deposito:hover {
+    background: var(--azul-claro);
+}
+
+#botton-section .btn-saque,
+#form-section .btn-saque {
+    background: var(--verde-claro);
+}
+
+#botton-section .btn-saque:hover,
+#form-section .btn-saque:hover {
+    background: var(--azul);
+}
+
+#buttons-section {
+    padding: 15px 0;
+    margin: 15px 0 0 0;
+}
+
+#buttons-section div {
+    margin: 15px auto;
+}
+
+#form-section label {
     font-size: 1.8em;
     margin: 0;
 }
-
-#form-saque .btn-saque {
-    background: #12db90;
-    color: #111
-}
-
-#form-saque .btn-saque:hover {
-    background: #1262DB;
-    color: #fff
-}
-
-/* .botton-section {
-    background-color: lightslategray;
-    height: 80vh;
-} */
