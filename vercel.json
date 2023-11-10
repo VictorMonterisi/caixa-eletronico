@@ -3,11 +3,5 @@
       "api/*.php": {
         "runtime": "vercel-php@0.6.0"
         }
-    },
-    "redirects": [
-      {
-        "source": "/api/assets/php/includes/(.*)",
-        "destination": "/api/"
-      }
-    ]
+    }
 }
