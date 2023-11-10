@@ -1,13 +1,13 @@
 {
     "functions": {
-      "app/*.php": {
+      "api/*.php": {
         "runtime": "vercel-php@0.6.0"
         }
     },
     "redirects": [
       {
-        "source": "/app/assets/php/includes/(.*)",
-        "destination": "/app/"
+        "source": "/api/assets/php/includes/(.*)",
+        "destination": "/api/"
       }
     ]
 }
