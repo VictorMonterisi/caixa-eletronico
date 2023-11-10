@@ -1,0 +1,13 @@
+{
+    "functions": {
+      "app/*.php": {
+        "runtime": "vercel-php@0.6.0"
+        }
+    },
+    "redirects": [
+      {
+        "source": "/app/assets/php/includes/(.*)",
+        "destination": "/app/"
+      }
+    ]
+}
